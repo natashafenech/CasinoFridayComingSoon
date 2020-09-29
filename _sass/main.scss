@@ -256,7 +256,7 @@ a {
   body,
   html {
     font-size: 14px;
-    background-image: url(../images/Background.png);
+    background-image: url($base-url + "/assets/images/Background.png");
     background-repeat: no-repeat;
     background-size: cover;
   }
