@@ -232,6 +232,10 @@ a {
 }
 
 @media (max-width: 641px) {
+  #landing {
+    justify-content: flex-start !important;
+  }
+
   body,
   html {
     font-size: 14px;
@@ -245,7 +249,7 @@ a {
     #landing {
       .inner {
         width: 100vw;
-        height: 100vh;
+        min-height: 600px;
         background: none;
         position: relative;
         padding: 70px 30px;
