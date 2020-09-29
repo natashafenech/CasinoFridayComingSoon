@@ -3,44 +3,22 @@ $(window).scroll(function () {
 });
 
 $(document).ready(function () {
-    $('#getbeta').submit(function (event) {
-        event.preventDefault();
 
-        var formEl = $(this);
-        var submitButton = $('input[type=submit]', formEl);
+    const scriptURL = 'https://script.google.com/macros/s/AKfycbwIhVZo7pYe1K7ek-jg_uD-aUGKt99pli7G0q2JLAlCwlqlRTnS/exec'
+    const form = document.forms['getbeta']
+    var submitButton = $('input[type=submit]', form);
 
-        $.ajax({
-            type: 'POST',
-            url: formEl.prop('action'),
-            accept: {
-                javascript: 'application/javascript'
-            },
-            data: formEl.serialize(),
-            beforeSend: function () {
-                submitButton.prop('disabled', 'disabled');
-            }
-        }).done(function (data) {
-            submitButton.prop('disabled', false);
-            $('.pre').hide();
-            $('.post').show();
-        });
-    });
+    form.addEventListener('submit', e => {
+        e.preventDefault();
+        submitButton.prop('disabled', false);
+        $('.pre').hide();
+        $('.post').show();
+        fetch(scriptURL, { method: 'POST', body: new FormData(form) })
+            .then(response => {
+                submitButton.prop('disabled', false);
+                $('.pre').hide();
+                $('.post').show();
+            })
+            .catch(error => console.error('Error!', error.message))
+    })
 });
-
-var animateButton = function (e) {
-
-    e.preventDefault;
-    //reset animation
-    e.target.classList.remove('animate');
-
-    e.target.classList.add('animate');
-    setTimeout(function () {
-        e.target.classList.remove('animate');
-    }, 700);
-};
-
-var bubblyButtons = document.getElementsByClassName("bubbly-button");
-
-for (var i = 0; i < bubblyButtons.length; i++) {
-    bubblyButtons[i].addEventListener('click', animateButton, false);
-}

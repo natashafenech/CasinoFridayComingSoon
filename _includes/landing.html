@@ -1,7 +1,7 @@
 <section data-id="" id="landing" class="min-100vh flex-center-center">
     <div class="inner flex-center-center">
         <div class="logo">
-            <img src="assets//images/Logo.png">
+            <img src="{{ "/assets//images/Logo.png" | relative_url }}">
         </div>
         <div class="box flex-center-top">
             <h1>Coming Soon</h1>
@@ -10,7 +10,7 @@
             <div class="pre">
                 <h3>Don’t wait for #thatfeeling</h3>
                 <div style="height: 15px;"></div>
-                <form id="getbeta" action="https://formkeep.com/f/6fee9aae5577" method="POST" accept-charset="UTF-8">
+                <form name="getbeta" id="getbeta" >
                     <input class="input" type="email" name="email" required placeholder="Email Address" />
                     <div style="height: 15px;"></div>
                     <button class="bubbly-button">Get beta invite</button>
@@ -25,7 +25,7 @@
                     your inbox for further information.</h3>
                 <div style="height: 15px;"></div>
                 <div class="done">
-                    <img src="assets/images/Vector.png">
+                    <img src="{{ "/assets/images/Vector.png" | relative_url }}">
                     <span>Done</span>
                     </dvv>
                 </div>
