@@ -74,10 +74,9 @@ input[type="text"] {
   background: #f7f7fb;
   border-radius: 64px;
   width: 100%;
-  min-width: 311px;
 }
 
-input[type="submit"] {
+.button {
   color: $base-color;
   font-style: normal;
   font-weight: bold;
@@ -88,7 +87,6 @@ input[type="submit"] {
   background: #1cfdd2;
   border-radius: 64px;
   width: 100%;
-  min-width: 311px;
 }
 
 a {
@@ -111,6 +109,11 @@ a {
   flex-direction: column;
 }
 
+.flex-center-top {
+  
+}
+
+
 .hidden {
   display: none;
 }
@@ -132,6 +135,8 @@ a {
         border-radius: 8px;
         text-align: center;
         z-index: 1;
+      padding:30px 20px;
+
       }
 
       .character {
@@ -151,6 +156,25 @@ a {
         top: 0;
         left: 0;
         padding: 75px;
+      }
+
+      .pre {
+      }
+
+      .post {
+        display: none;
+
+        padding: 0 30px;
+        .done {
+          font-style: normal;
+          font-weight: bold;
+          font-size: 16px;
+          line-height: 24px;
+          
+          img {
+            padding-right: 10px;
+          }
+        }
       }
     }
   }
