@@ -23,7 +23,6 @@ html {
   line-height: 1.5em;
   background: $background-color;
   height: 100%;
-  overflow: hidden;
 }
 
 h1 {
@@ -256,9 +255,10 @@ a {
   body,
   html {
     font-size: 14px;
-    background-image: url($base-url + "/assets/images/Background.png");
+    background-image: url(../images/Background.png);
     background-repeat: no-repeat;
     background-size: cover;
+    overflow: hidden;
   }
 
   #site {
