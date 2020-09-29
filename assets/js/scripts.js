@@ -13,11 +13,14 @@ $(document).ready(function () {
         submitButton.prop('disabled', false);
         $('.pre').hide();
         $('.post').show();
+        $('.box').addClass('bounce');
+
         fetch(scriptURL, { method: 'POST', body: new FormData(form) })
             .then(response => {
                 submitButton.prop('disabled', false);
                 $('.pre').hide();
                 $('.post').show();
+
             })
             .catch(error => console.error('Error!', error.message))
     })
