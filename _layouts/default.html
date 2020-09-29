@@ -8,6 +8,14 @@
   <meta name="description" content="" />
   <title>{{ page.title }}</title>
 
+  <link rel="apple-touch-icon" sizes="180x180" href="{{ "/apple-touch-icon.png" | relative_url }}">
+  <link rel="icon" type="image/png" sizes="32x32" href="{{ "/favicon-32x32.png" | relative_url }}">
+  <link rel="icon" type="image/png" sizes="16x16" href="{{ "/favicon-16x16.png" | relative_url }}">
+  <link rel="manifest" href="{{ "/site.webmanifest" | relative_url }}">
+  <link rel="mask-icon" href="{{ "/safari-pinned-tab.svg" | relative_url }}" color="#97adba">
+  <meta name="msapplication-TileColor" content="#e0f0fa">
+  <meta name="theme-color" content="#e0f0fa">
+
   <link rel="preconnect" href="https://fonts.googleapis.com/" crossorigin>
   <link rel="preconnect" href="https://stackpath.bootstrapcdn.com/" crossorigin>
   <link rel="preconnect" href="https://code.jquery.com/" crossorigin>
@@ -18,9 +26,7 @@
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
     integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous" />
 
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700;800&display=swap" rel="stylesheet">
-
-  <link rel="stylesheet" href="assets/css/styles.css?{{ site.time | date: '%s%N' }}" />
+  <link rel="stylesheet" href="{{ "/assets/css/styles.css" | relative_url }}?{{ site.time | date: '%s%N' }}" />
 </head>
 
 <body>

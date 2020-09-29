@@ -122,7 +122,7 @@ a {
     .inner {
       width: 800px;
       height: 648px;
-      background-image: url(../images/Image.png);
+      background-image: url($base-url+"/assets/images/Image.png");
       position: relative;
 
       .box {
@@ -142,7 +142,7 @@ a {
         height: 595px;
         right: -50px;
         top: 35px;
-        background-image: url(../images/Character.png);
+        background-image: url($base-url+"/assets/images/Character.png");
         z-index: 0;
         background-position: center center;
       }
