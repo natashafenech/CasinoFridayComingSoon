@@ -249,7 +249,7 @@ a {
 @media (max-width: 641px) {
   #landing {
     justify-content: flex-start !important;
-    min-height: auto !important;
+    min-height: 0 !important;
   }
 
   body,
