@@ -110,9 +110,7 @@ a {
 }
 
 .flex-center-top {
-  
 }
-
 
 .hidden {
   display: none;
@@ -135,8 +133,7 @@ a {
         border-radius: 8px;
         text-align: center;
         z-index: 1;
-      padding:30px 20px;
-
+        padding: 30px 20px;
       }
 
       .character {
@@ -152,10 +149,10 @@ a {
 
       .logo {
         position: absolute;
-        z-index: 0;
         top: 0;
         left: 0;
         padding: 75px;
+        z-index: 999;
       }
 
       .pre {
@@ -170,7 +167,7 @@ a {
           font-weight: bold;
           font-size: 16px;
           line-height: 24px;
-          
+
           img {
             padding-right: 10px;
           }
@@ -237,5 +234,28 @@ a {
   body,
   html {
     font-size: 14px;
+    background-image: url(../images/Background.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+
+  }
+
+  #site {
+    overflow: hidden;
+    #landing {
+      .inner {
+        width: 100vw;
+        height: 100vh;
+        background: none;
+        position: relative;
+        padding:40px 30px;
+        justify-content: flex-end !important;
+
+
+        .logo{
+          padding:30px;
+        }
+      }
+    }
   }
 }
