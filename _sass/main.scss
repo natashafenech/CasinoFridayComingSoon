@@ -22,6 +22,7 @@ html {
   font-size: 16px;
   line-height: 1.5em;
   background: $background-color;
+  height: 100%;
 }
 
 h1 {
@@ -132,6 +133,7 @@ a {
 #site {
   overflow: hidden;
   #landing {
+    min-height: 100vh;
     .inner {
       width: 800px;
       height: 648px;
@@ -247,6 +249,7 @@ a {
 @media (max-width: 641px) {
   #landing {
     justify-content: flex-start !important;
+    min-height: auto !important;
   }
 
   body,
