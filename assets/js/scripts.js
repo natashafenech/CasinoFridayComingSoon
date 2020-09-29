@@ -3,11 +3,26 @@ $(window).scroll(function () {
 });
 
 $(document).ready(function () {
-    $('.submit').click(function () {
+    $('#getbeta').submit(function (event) {
+        event.preventDefault();
 
-        $('.pre').hide();
-        $('.post').show();
+        var formEl = $(this);
+        var submitButton = $('input[type=submit]', formEl);
 
-        return false;
-    })
+        $.ajax({
+            type: 'POST',
+            url: formEl.prop('action'),
+            accept: {
+                javascript: 'application/javascript'
+            },
+            data: formEl.serialize(),
+            beforeSend: function () {
+                submitButton.prop('disabled', 'disabled');
+            }
+        }).done(function (data) {
+            submitButton.prop('disabled', false);
+            $('.pre').hide();
+            $('.post').show();
+        });        
+    });
 });
