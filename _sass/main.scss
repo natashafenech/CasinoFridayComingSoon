@@ -63,7 +63,7 @@ h3 {
   color: #cecddb;
 }
 
-.input{
+.input {
   font-style: normal;
   font-weight: normal;
   font-size: 14px;
@@ -122,7 +122,8 @@ a {
     .inner {
       width: 800px;
       height: 648px;
-      background-image: url($base-url+"/assets/images/Image.png");
+      background-image: url($base-url + "/assets/images/Image.png");
+      background-position: center center;
       position: relative;
 
       .box {
@@ -142,7 +143,7 @@ a {
         height: 595px;
         right: -50px;
         top: 35px;
-        background-image: url($base-url+"/assets/images/Character.png");
+        background-image: url($base-url + "/assets/images/Character.png");
         z-index: 0;
         background-position: center center;
       }
@@ -230,14 +231,13 @@ a {
   }
 }
 
-@media (max-width: 768px) {
+@media (max-width: 641px) {
   body,
   html {
     font-size: 14px;
     background-image: url(../images/Background.png);
     background-repeat: no-repeat;
     background-size: cover;
-
   }
 
   #site {
@@ -248,12 +248,11 @@ a {
         height: 100vh;
         background: none;
         position: relative;
-        padding:40px 30px;
+        padding: 70px 30px;
         justify-content: flex-end !important;
 
-
-        .logo{
-          padding:30px;
+        .logo {
+          padding: 30px;
         }
       }
     }
